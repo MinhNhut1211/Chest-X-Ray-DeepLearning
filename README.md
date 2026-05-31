@@ -48,10 +48,12 @@ pip install Flask numpy tensorflow torch torchvision transformers pytorch-grad-c
 **3. 📷 Hình ảnh Demo:**
 <img width="948" height="423" alt="image" src="https://github.com/user-attachments/assets/6e813d80-5cb2-4dce-a950-76568c8085a2" />
 
-**4. 🚀 File Dataset: 
+**4. 🚀 File Dataset:** 
 https://drive.google.com/file/d/1jY__cBgpJMJzPfeXhisZXsxYUUZsMnPD/view?usp=drive_link
 
 
 # Contact <p>
 ##### Facebook: https://www.facebook.com/tranminhnhut121102 <p>
-##### Momo: 0939125541
+##### Stk: 0601000528876
+##### Nh: Vietcombank
+##### Ten: Tran Minh Nhut
