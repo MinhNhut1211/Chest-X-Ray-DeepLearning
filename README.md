@@ -23,7 +23,7 @@
 
 ## 🏗️ Cấu trúc Mã nguồn (Source Code Architecture)
 
-### 1. AI Training & Models (`doan1.ipynb`)
+### 1. AI Training & Models (`doan.ipynb`)
 Sổ tay Jupyter chứa toàn bộ quá trình tiền xử lý dữ liệu và huấn luyện mô hình trên Google Colab.
 - **Data Preprocessing:** Chuẩn hóa ảnh (resize 150x150 cho CNN, 224x224 cho ViT), chuẩn hóa pixel [0, 1] và lật ảnh ngẫu nhiên để tăng cường dữ liệu.
 - **Model Architecture:** Xây dựng chuỗi tích chập tuần tự cho CNN và fine-tuning mô hình `vit-base-patch16-224` của HuggingFace.
@@ -46,7 +46,11 @@ Mở Terminal/CMD và chạy lệnh sau:
 pip install Flask numpy tensorflow torch torchvision transformers pytorch-grad-cam opencv-python matplotlib Pillow
 
 **3. 📷 Hình ảnh Demo:**
-<img width="948" height="423" alt="image" src="https://github.com/user-attachments/assets/636c235a-8f52-4c07-8ec6-c37187f98faf" />
+<img width="948" height="423" alt="image" src="https://github.com/user-attachments/assets/6e813d80-5cb2-4dce-a950-76568c8085a2" />
+
+**4. 🚀 File Dataset: 
+https://drive.google.com/file/d/1jY__cBgpJMJzPfeXhisZXsxYUUZsMnPD/view?usp=drive_link
+
 
 # Contact <p>
 ##### Facebook: https://www.facebook.com/tranminhnhut121102 <p>
