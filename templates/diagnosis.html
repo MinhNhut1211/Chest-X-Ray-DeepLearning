@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Chẩn Đoán AI - X-Ray Chest</title>
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- SweetAlert2 for "Doctor Online" -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-brand {
+      color: #00d2ff !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .upload-area {
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .upload-area:hover {
+      border-color: #00d2ff;
+      background: rgba(0, 210, 255, 0.05);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: transform 0.2s;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+    }
+
+    .img-preview-box {
+      width: 100%;
+      height: 350px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .img-preview-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .scanning-line {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: #00d2ff;
+      box-shadow: 0 0 15px #00d2ff;
+      top: 0;
+      animation: scan 2s infinite linear;
+      display: none;
+    }
+
+    @keyframes scan {
+      0% {
+        top: 0;
+      }
+
+      50% {
+        top: 100%;
+      }
+
+      100% {
+        top: 0;
+      }
+    }
+
+    .custom-select {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .custom-select option {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="/"><i class="bi bi-lungs"></i> X-Ray AI</a>
+      <a href="/" class="btn btn-outline-light btn-sm rounded-pill"><i class="bi bi-arrow-left"></i> Về Trang Chủ</a>
+    </div>
+  </nav>
+
+  <div class="container py-5 flex-grow-1">
+    <div class="row mb-4 text-center">
+      <div class="col-12">
+        <h2 class="fw-bold" style="color: #00d2ff;">Demo Chẩn Đoán Phổi</h2>
+        <p class="text-light opacity-75">Tải lên hình ảnh X-Quang để phân tích và đưa ra kết luận tức thì.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="glass-panel h-100">
+          <h4 class="mb-4"><i class="bi bi-sliders"></i> Bảng Điều Khiển</h4>
+
+          <div class="mb-4">
+            <label class="form-label text-light opacity-75">Chọn Mô Hình AI</label>
+            <select id="modelChoice" class="form-select custom-select">
+              <option value="custom_cnn">Mạng CNN Tự Xây Dựng</option>
+              <option value="vit">Mạng Vision Transformer (ViT)</option>
+            </select>
+          </div>
+
+          <div class="upload-area mb-4" onclick="document.getElementById('fileInput').click()">
+            <i class="bi bi-cloud-arrow-up display-4 text-info mb-3"></i>
+            <h5>Tải Ảnh X-Quang Lên</h5>
+            <p class="text-muted small mb-0">Hỗ trợ JPG, PNG, JPEG</p>
+            <input type="file" id="fileInput" accept="image/*" class="d-none" onchange="previewImage(this)">
+          </div>
+
+          <button id="analyzeBtn" class="btn btn-gradient w-100" onclick="startDiagnosis()" disabled>
+            <i class="bi bi-magic"></i> PHÂN TÍCH NGAY
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="glass-panel h-100">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <h5 class="text-center mb-3 text-light">Ảnh Gốc</h5>
+              <div class="img-preview-box" id="originalBox">
+                <span class="text-muted" id="placeholderText">Chưa có ảnh</span>
+                <img id="originalImg" class="d-none" alt="Original">
+                <div class="scanning-line" id="scanLine"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="text-center mb-3 text-info">Bản Đồ Nhiệt (Grad-CAM)</h5>
+              <div class="img-preview-box" id="heatmapBox">
+                <span class="text-muted" id="heatmapPlaceholder">Đang chờ phân tích...</span>
+                <img id="heatmapImg" class="d-none" alt="Heatmap">
+              </div>
+            </div>
+          </div>
+
+          <div id="resultBox" class="mt-4 p-3 rounded-3 text-center d-none"
+            style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+            <h4 id="resultText" class="mb-0 fw-bold"></h4>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let selectedFile = null;
+
+    function previewImage(input) {
+      if (input.files && input.files[0]) {
+        selectedFile = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('originalImg').src = e.target.result;
+          document.getElementById('originalImg').classList.remove('d-none');
+          document.getElementById('placeholderText').classList.add('d-none');
+          document.getElementById('analyzeBtn').disabled = false;
+
+          document.getElementById('heatmapImg').classList.add('d-none');
+          document.getElementById('heatmapPlaceholder').classList.remove('d-none');
+          document.getElementById('resultBox').classList.add('d-none');
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    function triggerOnlineDoctor(result, confidence, status) {
+      let trollText = "";
+
+      if (status === 'success') {
+        trollText = `Ơ anh chào Vũ nhá, em là Vũ à Vũ? Chúc mừng em là em <b>khỏe mạnh</b> nhá! Phổi em mượt lắm. Anh hứa là không đăng thông tin gì của em lên mạng cả. Chứ còn địa chỉ nhà em... thôi bỏ đi, phổi khỏe là tốt rồi!`;
+      } else if (status === 'danger') {
+        trollText = `Ơ anh chào Vũ nhá, em là Vũ à Vũ? Trời ơi em ơi, chối làm sao được Vũ. Kết quả rành rành là em <b>bị viêm phổi</b> rồi. Vũ mà không đi khám nghiêm túc là anh đăng hết thông tin của Vũ lên mạng đấy!`;
+      } else {
+        trollText = `Vũ à Vũ? Cái phổi của em nó lạ lắm, anh nhìn cũng không chắc là em khỏe hay bệnh nữa. Ca này khó quá Vũ ơi! Thôi em chịu khó cầm cái hình này ra gặp bác sĩ thật ngoài đời đi, chứ anh chịu rồi, không phán bừa được!`;
+      }
+
+      let fullTroll = `Ơ anh chào Vũ nhá, em là Vũ à Vũ? Trời ơi em ơi, chối làm sao được Vũ. Anh nói thật đấy, Vũ mà không nói chuyện nghiêm túc với anh là anh đăng hết thông tin của Vũ lên mạng đấy.<br><br>
+    ${trollText}<br><br>
+    Kết quả: <b>${result}</b> (Tin cậy: ${confidence})`;
+
+      // Create the messenger popup dynamically if it doesn't exist
+      let messengerBox = document.getElementById('trollMessenger');
+      if (!messengerBox) {
+        messengerBox = document.createElement('div');
+        messengerBox.id = 'trollMessenger';
+        messengerBox.style.position = 'fixed';
+        messengerBox.style.bottom = '20px';
+        messengerBox.style.left = '-400px';
+        messengerBox.style.width = '350px';
+        messengerBox.style.backgroundColor = '#1e293b';
+        messengerBox.style.borderRadius = '15px';
+        messengerBox.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
+        messengerBox.style.zIndex = '9999';
+        messengerBox.style.transition = 'left 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        messengerBox.style.border = '1px solid #334155';
+        messengerBox.style.overflow = 'hidden';
+
+        messengerBox.innerHTML = `
+        <div style="background: linear-gradient(90deg, #0f172a, #1e293b); padding: 15px; border-bottom: 1px solid #334155; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: #00d2ff; display: flex; align-items: center; justify-content: center; font-weight: bold; color: black; font-size: 20px;">
+              👨‍⚕️
+            </div>
+            <div>
+              <h6 style="margin: 0; color: white; font-weight: bold;">Bác sĩ Online</h6>
+              <small style="color: #10b981;">● Đang hoạt động</small>
+            </div>
+          </div>
+          <button onclick="document.getElementById('trollMessenger').style.left = '-400px'" style="background: transparent; border: none; color: #94a3b8; font-size: 20px; cursor: pointer;">&times;</button>
+        </div>
+        <div style="padding: 20px; max-height: 400px; overflow-y: auto; font-size: 0.9rem; line-height: 1.5; color: #e2e8f0;">
+          <div style="background: rgba(0, 210, 255, 0.1); border-left: 3px solid #00d2ff; padding: 10px; border-radius: 0 10px 10px 0;">
+            <p id="trollContent" style="margin: 0;"></p>
+          </div>
+        </div>
+      `;
+        document.body.appendChild(messengerBox);
+      }
+
+      document.getElementById('trollContent').innerHTML = fullTroll;
+
+      // Animate slide in
+      setTimeout(() => {
+        messengerBox.style.left = '20px';
+
+        // Play a notification sound
+        let audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
+        audio.volume = 0.5;
+        audio.play().catch(e => console.log("Audio play prevented by browser"));
+
+      }, 100);
+    }
+
+    async function startDiagnosis() {
+      if (!selectedFile) return;
+
+      const btn = document.getElementById('analyzeBtn');
+      const scanLine = document.getElementById('scanLine');
+      const modelChoice = document.getElementById('modelChoice').value;
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Đang soi chiếu...';
+      scanLine.style.display = 'block';
+
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('model_choice', modelChoice);
+
+      try {
+        const response = await fetch('/predict', { method: 'POST', body: formData });
+        const data = await response.json();
+
+        scanLine.style.display = 'none';
+        btn.disabled = false;
+        btn.innerHTML = '<i class="bi bi-magic"></i> PHÂN TÍCH NGAY';
+
+        if (data.error) {
+          Swal.fire('Lỗi', data.error, 'error');
+          return;
+        }
+
+        const resultBox = document.getElementById('resultBox');
+        const resultText = document.getElementById('resultText');
+        resultBox.classList.remove('d-none');
+
+        if (data.status === 'success') {
+          resultText.innerHTML = `✅ ${data.result} - Độ tin cậy: <span class="text-success">${data.confidence}</span>`;
+        } else if (data.status === 'danger') {
+          resultText.innerHTML = `⚠️ ${data.result} - Độ tin cậy: <span class="text-danger">${data.confidence}</span>`;
+        } else {
+          resultText.innerHTML = `🔍 ${data.result} - Độ tin cậy: <span class="text-warning">${data.confidence}</span>`;
+        }
+
+        if (data.heatmap_url) {
+          const heatmapImg = document.getElementById('heatmapImg');
+          heatmapImg.src = data.heatmap_url + "?t=" + new Date().getTime();
+          heatmapImg.classList.remove('d-none');
+          document.getElementById('heatmapPlaceholder').classList.add('d-none');
+        }
+
+        setTimeout(() => {
+          triggerOnlineDoctor(data.result, data.confidence, data.status);
+        }, 600);
+
+      } catch (err) {
+        scanLine.style.display = 'none';
+        btn.disabled = false;
+        btn.innerHTML = '<i class="bi bi-magic"></i> PHÂN TÍCH NGAY';
+        Swal.fire('Lỗi server', 'Không thể kết nối đến AI.', 'error');
+      }
+    }
+  </script>
+</body>
+
+</html>

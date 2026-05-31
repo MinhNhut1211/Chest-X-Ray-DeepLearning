@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Medilab Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="/static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:tmn12112002@gmail.com">tmn12112002@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>0937187003</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="/static/assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">X ray Chest</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Trang Chủ</a></li>
+            <li><a href="#about">Về Dự Án</a></li>
+            <li><a href="#services">Tính Năng</a></li>
+            <li><a href="/diagnosis">Chẩn Đoán</a></li>
+            <li class="dropdown"><a href="#"><span>Tài Nguyên</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#gallery">Dữ Liệu Ảnh Mẫu</a></li>
+                <li class="dropdown"><a href="#"><span>Tài Liệu Kỹ Thuật</span> <i
+                      class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Kiến Trúc Model CNN</a></li>
+                    <li><a href="#">Mã Nguồn (GitHub)</a></li>
+                    <li><a href="#">Báo Cáo Đồ Án</a></li>
+                  </ul>
+                </li>
+                <li><a href="#faq">Câu Hỏi Thường Gặp (FAQ)</a></li>
+                <li><a href="#testimonials">Đánh Giá Của Người Dùng</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="/diagnosis">Chẩn đoán ngay</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="/static/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative">
+
+        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+          <h2>HỆ THỐNG TRÍ TUỆ NHÂN TẠO Y TẾ</h2>
+          <p>Ứng dụng Deep Learning hỗ trợ chẩn đoán viêm phổi qua ảnh X-quang ngực một cách nhanh chóng và chính xác.
+          </p>
+        </div>
+        <div class="content row gy-4">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+              <h3>Tại sao chọn AI X-Ray?</h3>
+              <p>
+                Hệ thống sử dụng mạng nơ-ron tích chập (CNN) được huấn luyện trên hàng ngàn hình ảnh dữ liệu chuẩn y
+                khoa. Chúng tôi mang đến công cụ đắc lực giúp sàng lọc, phát hiện sớm dấu hiệu viêm phổi (Pneumonia) và
+                tối ưu hóa thời gian chẩn đoán bệnh.
+              </p>
+              <div class="text-center">
+                <a href="/diagnosis" class="more-btn"><span>Thử nghiệm ngay</span> <i
+                    class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="row gy-4">
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+                    <i class="bi bi-cpu"></i>
+                    <h4>Phân Tích Tức Thì</h4>
+                    <p>Tốc độ xử lý tính bằng giây. Chỉ cần tải ảnh X-quang lên, mô hình AI sẽ tự động quét và trả kết
+                      quả tức khắc.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+                    <i class="bi bi-shield-check"></i>
+                    <h4>Độ Chính Xác Cao</h4>
+                    <p>Mô hình Deep Learning được tinh chỉnh kỹ lưỡng, hỗ trợ nhận diện các vùng mờ và tổn thương phổi
+                      với độ tin cậy cao.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+                    <i class="bi bi-laptop"></i>
+                    <h4>Dễ Dàng Sử Dụng</h4>
+                    <p>Giao diện trực quan, tối giản hóa các bước thao tác, phù hợp để người dùng vãng lai trải nghiệm
+                      và tra cứu nhanh.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- End  Content-->
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4 gx-5">
+
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="/static/assets/img/about.png" class="img-fluid" alt="AI X-Ray Architecture">
+            <a href="https://youtu.be/JSl13J-Y4vg" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>Về Dự Án AI X-Ray</h3>
+            <p>
+              Hệ thống chẩn đoán viêm phổi được xây dựng trên nền tảng trí tuệ nhân tạo, ứng dụng mô hình Học Sâu (Deep
+              Learning) với mạng nơ-ron tích chập (CNN). Mục tiêu của dự án là cung cấp một công cụ hỗ trợ đắc lực, giúp
+              việc phân tích và sàng lọc ảnh X-quang ngực trở nên nhanh chóng, chính xác.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <h5>Dữ Liệu Huấn Luyện Chuẩn Y Khoa</h5>
+                  <p>Mô hình được đào tạo kỹ lưỡng trên tập dữ liệu Chest X-Ray với hàng ngàn mẫu ảnh thực tế, giúp AI
+                    học được cách phân biệt giữa phổi bình thường và phổi có dấu hiệu viêm.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-network-wired"></i>
+                <div>
+                  <h5>Kiến Trúc CNN Tối Ưu</h5>
+                  <p>Áp dụng các lớp tích chập (Conv2D) và gộp (MaxPool2D) tiên tiến, kết hợp Dropout để mô hình tự động
+                    nhận diện các tổn thương nhỏ nhất trên phổi mà không bị học vẹt (overfitting).</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-laptop-medical"></i>
+                <div>
+                  <h5>Tích Hợp Triển Khai Linh Hoạt</h5>
+                  <p>Mô hình TensorFlow/Keras sau khi huấn luyện được tích hợp liền mạch vào hệ thống backend Flask,
+                    mang đến trải nghiệm chẩn đoán theo thời gian thực (real-time) ngay trên trình duyệt web.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-user-doctor"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Doctors</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-regular fa-hospital"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Departments</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fas fa-flask"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Research Labs</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fas fa-award"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="360" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <section id="services" class="services section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Tính Năng Nổi Bật</h2>
+          <p>Hệ thống AI X-Ray cung cấp các giải pháp công nghệ tiên tiến nhằm hỗ trợ tối đa cho quá trình chẩn đoán và
+            sàng lọc bệnh lý viêm phổi.</p>
+        </div>
+        <div class="container">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-item  position-relative">
+                <div class="icon">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Chẩn Đoán Tức Thì</h3>
+                </a>
+                <p>Hệ thống tiếp nhận ảnh X-quang và tiến hành phân tích, trả về kết quả dự đoán tình trạng phổi chỉ
+                  trong vài giây, tiết kiệm tối đa thời gian.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="fas fa-pills"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Định Hướng Điều Trị</h3>
+                </a>
+                <p>Cung cấp cơ sở dữ liệu và đánh giá khách quan từ AI, giúp các y bác sĩ nhanh chóng đưa ra phác đồ
+                  điều trị và sử dụng thuốc kịp thời.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="fas fa-hospital-user"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Thân Thiện Với Người Dùng</h3>
+                </a>
+                <p>Giao diện được thiết kế trực quan, thao tác đơn giản, phù hợp cho cả nhân viên y tế tại bệnh viện lẫn
+                  người dùng cá nhân muốn tra cứu.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="fas fa-dna"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Công Nghệ Deep Learning</h3>
+                </a>
+                <p>Ứng dụng mạng nơ-ron tích chập (CNN) mô phỏng cách bộ não xử lý thông tin, nhận diện chính xác các
+                  vùng mờ và tổn thương trên phổi.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="fas fa-wheelchair"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Khả Năng Tiếp Cận Cao</h3>
+                </a>
+                <p>Được triển khai dưới dạng ứng dụng Web, hệ thống hoạt động mượt mà trên nhiều thiết bị khác nhau, cho
+                  phép truy cập mọi lúc mọi nơi.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="fas fa-notes-medical"></i>
+                </div>
+                <a href="#" class="stretched-link">
+                  <h3>Báo Cáo Minh Bạch</h3>
+                </a>
+                <p>Tự động xuất kết quả phân tích đi kèm với tỷ lệ độ tin cậy (confidence score) rõ ràng, giúp bác sĩ dễ
+                  dàng đánh giá và lưu trữ hồ sơ.</p>
+                <a href="#" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- Appointment Section -->
+      <section id="appointment" class="appointment section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Chẩn Đoán Trực Tuyến</h2>
+          <p>Vui lòng tải lên hình ảnh X-quang lồng ngực để hệ thống AI tiến hành quét và phân tích. Quá trình này sẽ
+            trả kết quả dự đoán chỉ trong vài giây.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <form id="upload-form" enctype="multipart/form-data" class="php-email-form mt-4"
+            style="background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center mb-3">
+                <h4 style="color: #2c4964; margin-bottom: 20px; font-weight: 600;">Tải Ảnh X-Quang Của Bạn</h4>
+              </div>
+
+              <div class="col-md-8 text-center mb-4">
+                <label for="modelSelect" style="font-weight: bold; color: #2c4964; margin-bottom: 10px;">Chọn Mô Hình
+                  Chẩn Đoán:</label>
+                <select id="modelSelect" name="modelSelect" class="form-select"
+                  style="max-width: 300px; margin: 0 auto; padding: 10px; border-radius: 5px;">
+                  <option value="custom_cnn">Mạng CNN Tự Xây Dựng</option>
+                  <option value="ViT">Mô Hình Vision Transformer (ViT)</option>
+                </select>
+              </div>
+              <div class="col-md-6 form-group text-center">
+                <input type="file" name="file" id="imageInput" class="form-control" accept="image/*" required
+                  style="padding: 10px;">
+              </div>
+            </div>
+
+            <div class="text-center mt-3">
+              <img id="imagePreview" src="" alt="Ảnh X-quang xem trước"
+                style="max-width: 300px; display: none; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 15px;">
+            </div>
+
+            <div class="mt-4 text-center">
+              <button type="submit" id="predictBtn" class="btn btn-primary"
+                style="background: #1977cc; border: none; padding: 12px 35px; font-size: 18px; border-radius: 50px; color: white; cursor: pointer; transition: 0.3s;">CHẨN
+                ĐOÁN NGAY</button>
+            </div>
+
+            <div class="text-center mt-4">
+              <h3 id="resultText"
+                style="color: #d9534f; font-weight: bold; display: none; padding: 15px; border-radius: 5px; margin-top: 20px;">
+              </h3>
+            </div>
+
+            <div id="heatmap-container" class="text-center mt-4" style="display: none;">
+              <h5 style="color: #2c4964; font-weight: 600;">Bản Đồ Nhiệt (Grad-CAM) - Vùng AI Tập Trung</h5>
+              <img id="heatmapImage" src="" alt="Grad-CAM"
+                style="max-width: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2); border: 2px solid #1977cc;">
+              <p style="font-size: 0.9rem; color: #6c757d; margin-top: 10px;">Vùng màu đỏ/vàng là nơi mô hình AI tập
+                trung phân tích để đưa ra kết luận.</p>
+            </div>
+          </form>
+
+          <script>
+            document.getElementById('imageInput').addEventListener('change', function (e) {
+              const reader = new FileReader();
+              reader.onload = function (event) {
+                document.getElementById('imagePreview').src = event.target.result;
+                document.getElementById('imagePreview').style.display = 'inline-block';
+                document.getElementById('resultText').style.display = 'none';
+                document.getElementById('heatmap-container').style.display = 'none';
+              }
+              reader.readAsDataURL(e.target.files[0]);
+            });
+
+            document.getElementById('upload-form').addEventListener('submit', function (e) {
+              e.preventDefault();
+
+              let formData = new FormData();
+              let imageFile = document.getElementById('imageInput').files[0];
+              formData.append("file", imageFile);
+
+              let selectedModel = document.getElementById('modelSelect').value;
+              formData.append("model_choice", selectedModel);
+
+              document.getElementById('predictBtn').innerText = 'Đang phân tích...';
+
+              fetch('/predict', {
+                method: 'POST',
+                body: formData
+              })
+                .then(response => response.json())
+                .then(data => {
+                  document.getElementById('predictBtn').innerText = 'CHẨN ĐOÁN NGAY';
+                  const resultElement = document.getElementById('resultText');
+                  resultElement.style.display = 'block';
+
+                  if (data.error) {
+                    resultElement.innerText = "Lỗi: " + data.error;
+                    resultElement.style.color = "#d9534f";
+                    resultElement.style.backgroundColor = "#fdf2f2";
+                    resultElement.style.border = "1px solid #f2dede";
+                  } else {
+                    resultElement.innerText = "KẾT QUẢ: " + data.result;
+
+                    if (data.result.toUpperCase().includes("BÌNH THƯỜNG")) {
+                      resultElement.style.color = "#155724";
+                      resultElement.style.backgroundColor = "#d4edda";
+                      resultElement.style.border = "1px solid #c3e6cb";
+                    } else {
+                      resultElement.style.color = "#721c24";
+                      resultElement.style.backgroundColor = "#f8d7da";
+                      resultElement.style.border = "1px solid #f5c6cb";
+                    }
+
+                    if (data.heatmap_url) {
+                      const heatmapImg = document.getElementById('heatmapImage');
+                      heatmapImg.src = data.heatmap_url;
+                      document.getElementById('heatmap-container').style.display = 'block';
+                    }
+                  }
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  document.getElementById('predictBtn').innerText = 'CHẨN ĐOÁN NGAY';
+                });
+            });
+          </script>
+
+
+        </div>
+
+      </section>
+
+      <!-- Departments Section -->
+      <section id="departments" class="departments section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Quy Trình Hoạt Động AI</h2>
+          <p>Hệ thống phân tích X-quang được vận hành qua một quy trình chặt chẽ, kết hợp giữa xử lý ảnh y khoa và mô
+            hình Học Sâu tiên tiến.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#departments-tab-1">1. Tiền Xử Lý Ảnh</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-2">2. Trích Xuất Đặc Trưng</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-3">3. Phân Loại Dữ Liệu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-4">4. Đánh Giá Mô Hình</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-5">5. Triển Khai Web</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="departments-tab-1">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Chuẩn hóa & Tăng cường dữ liệu (Data Preprocessing)</h3>
+                      <p class="fst-italic">Đưa hình ảnh thô về chuẩn định dạng thống nhất để AI có thể "đọc" được.</p>
+                      <p>Hình ảnh X-quang người dùng tải lên sẽ được tự động thay đổi kích thước về chuẩn 150x150 pixel
+                        và chuyển sang hệ màu xám (grayscale). Sau đó, hệ thống sử dụng ImageDataGenerator để chia tỷ lệ
+                        các giá trị pixel về khoảng [0, 1], giúp thuật toán học nhanh hơn và ổn định hơn. Trong lúc huấn
+                        luyện, dữ liệu còn được tăng cường (zoom, lật ngang) để mô hình không bị học vẹt.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="/static/assets/img/departments-1.jpg" alt="Tiền xử lý ảnh"
+                        class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="departments-tab-2">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Mạng Nơ-ron Tích Chập (CNN Architecture)</h3>
+                      <p class="fst-italic">Sử dụng các lớp Conv2D và MaxPool2D để dò tìm dấu hiệu viêm phổi.</p>
+                      <p>Hệ thống quét qua bức ảnh bằng 3 lớp tích chập (Conv2D) với các bộ lọc 32, 64 và 128. Tại đây,
+                        AI đóng vai trò như một chiếc kính lúp, tìm kiếm các mẫu hình đặc trưng như các vùng mờ, dịch
+                        nhầy hoặc tổn thương trong phổi. Lớp MaxPool2D đi kèm giúp giảm bớt kích thước dữ liệu nhưng vẫn
+                        giữ lại các đặc trưng quan trọng nhất.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="/static/assets/img/departments-2.jpg" alt="Kiến trúc CNN"
+                        class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="departments-tab-3">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Quyết Định & Phân Loại (Dense Layers)</h3>
+                      <p class="fst-italic">Tổng hợp đặc trưng để đưa ra kết luận cuối cùng.</p>
+                      <p>Sau khi được trích xuất, dữ liệu hình ảnh 2D sẽ được duỗi thẳng (Flatten) thành mảng 1D để đưa
+                        vào mạng nơ-ron truyền thống. Lớp Dropout (0.5) được thêm vào để tắt ngẫu nhiên một nửa số
+                        nơ-ron, ngăn chặn tình trạng overfitting. Cuối cùng, hàm kích hoạt Sigmoid sẽ tính toán xác suất
+                        và phân loại tấm ảnh thành một trong hai trường hợp: BÌNH THƯỜNG hoặc VIÊM PHỔI.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="/static/assets/img/departments-3.jpg" alt="Phân loại dữ liệu"
+                        class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="departments-tab-4">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Kiểm Định Độ Chính Xác (Validation)</h3>
+                      <p class="fst-italic">Theo dõi, đánh giá sai số và tự động lưu lại phiên bản AI tốt nhất.</p>
+                      <p>Trong suốt 50 chu kỳ huấn luyện (epochs) với bộ tối ưu Adam, mô hình liên tục được kiểm tra
+                        chéo trên tập dữ liệu Validation. Hàm ModelCheckpoint sẽ tự động theo dõi và chỉ lưu lại tệp
+                        trọng số có độ chính xác cao nhất. Điều này đảm bảo khi đưa vào sử dụng thực tế, AI X-Ray luôn
+                        là phiên bản hoàn thiện và đáng tin cậy nhất.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="/static/assets/img/departments-4.jpg" alt="Biểu đồ đánh giá"
+                        class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="departments-tab-5">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Triển Khai API Thực Tế (Web Deployment)</h3>
+                      <p class="fst-italic">Kết nối AI vào giao diện Web để người dùng dễ dàng thao tác.</p>
+                      <p>Mô hình sau khi huấn luyện (.keras) được tải lên Backend viết bằng Flask. Khi người dùng chọn
+                        chức năng "Chẩn Đoán Ngay", ảnh sẽ được gửi ngầm thông qua API bằng JavaScript. Backend Flask sẽ
+                        chạy lệnh dự đoán (predict) trên mô hình và phản hồi kết quả trực tiếp ra màn hình mà không cần
+                        tải lại trang. Nhanh chóng, bảo mật và cực kỳ tiện lợi.</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="/static/assets/img/departments-5.jpg" alt="Triển khai thực tế"
+                        class="img-fluid rounded shadow">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- /Departments Section -->
+
+      <!-- Doctors Section -->
+      <section id="doctors" class="doctors section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Doctors</h2>
+          <p>Meet our dedicated team of experienced medical professionals.</p>
+        </div>
+        <div class="container">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/Nhi.jpg" class="img-fluid" alt="Nguyen Phat">
+                </div>
+                <div class="member-info">
+                  <h4>Yen Nhi</h4>
+                  <span>Trưởng Khoa... Bơm Động Lực</span>
+                  <p>Chuyên gia trị liệu các ca "bệnh lười" nan y, kê đơn bằng 100 cái deadline mỗi ngày giúp bệnh nhân
+                    lập tức tỉnh táo.</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/Bao.jpg" class="img-fluid" alt="Hau Ly Vu Nhan">
+                </div>
+                <div class="member-info">
+                  <h4>Nguyen Bao</h4>
+                  <span>Bác Sĩ Gây... Lú</span>
+                  <p>huyên gia gây mê chuẩn quốc tế. Tiêm một mũi không biết đau là gì, nhưng khi tỉnh dậy chắc chắn
+                    quên pass fb.</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/Minh.jpg" class="img-fluid" alt="Le Van Mine">
+                </div>
+                <div class="member-info">
+                  <h4>Dong Phuoc</h4>
+                  <span>Giáo Sư Chữa Viêm Màng Túi</span>
+                  <p>Đã phẫu thuật thành công hàng ngàn ca nghèo mãn tính, nhưng tác dụng phụ là cuối tháng bệnh nhân
+                    vẫn phải ăn mì tôm.</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/Nhut2.jpg" class="img-fluid" alt="Minh Nhut">
+                </div>
+                <div class="member-info">
+                  <h4>Nhut Dolphin</h4>
+                  <span>Chuyên Gia Thao Túng Tâm Lý</span>
+                  <p>Chữa bệnh bằng sức mạnh niềm tin. Chỉ cần bác sĩ vỗ vai bảo "Không sao đâu", bệnh nhân tự nhiên
+                    thấy ví tiền nhẹ đi một nửa.</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/Phat.jpg" class="img-fluid" alt="Mr.dat"></div>
+                <div class="member-info">
+                  <h4>Thanh Fat</h4>
+                  <span>Thần Y... Chữa Bệnh Tàng Hình</span>
+                  <p>Chuyên trị những ca đột nhiên "mất tích", sủi bọt mỗi khi có bài tập nhóm. Thuốc đặc trị là gọi hồn
+                    liên tục trên group chat đến khi nào rep thì thôi.</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="team-member d-flex align-items-start">
+                <div class="pic"><img src="/static/assets/img/doctors/do.jpg" class="img-fluid" alt="do"></div>
+                <div class="member-info">
+                  <h4>Domixue</h4>
+                  <span>Phó giáo su tiến sỹ người tày</span>
+                  <p>bác sĩ luôn quan tâm đến địa chỉ và người thân của bệnh nhân</p>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""> <i class="bi bi-linkedin"></i> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section id="faq" class="faq section light-background">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Câu Hỏi Thường Gặp (FAQ)</h2>
+          <p>Giải đáp các thắc mắc về quá trình hoạt động, độ chính xác và tính bảo mật của hệ thống AI X-Ray</p>
+        </div>
+        <div class="container">
+
+          <div class="row justify-content-center">
+
+            <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="faq-container">
+
+                <div class="faq-item faq-active">
+                  <h3>Hệ thống chẩn đoán có độ chính xác là bao nhiêu?</h3>
+                  <div class="faq-content">
+                    <p>Hệ thống sử dụng mô hình CNN đã được huấn luyện trên hàng ngàn ảnh X-quang chuẩn y khoa, đạt độ
+                      chính xác (Accuracy) rất cao trên tập dữ liệu kiểm thử. Tuy nhiên, kết quả này mang tính chất tham
+                      khảo và hỗ trợ y tế.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <div class="faq-item">
+                  <h3>Ảnh X-quang tôi tải lên có bị lưu trữ lại không?</h3>
+                  <div class="faq-content">
+                    <p>Hoàn toàn không. Để đảm bảo quyền riêng tư và bảo mật thông tin y tế, hình ảnh của bạn chỉ được
+                      xử lý tạm thời trên bộ nhớ RAM máy chủ trong vài giây để đưa ra kết quả, sau đó sẽ bị xóa ngay lập
+                      tức.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <div class="faq-item">
+                  <h3>Tôi có thể dùng AI thay thế cho quyết định của bác sĩ không?</h3>
+                  <div class="faq-content">
+                    <p>Không. Trí tuệ nhân tạo đóng vai trò là công cụ hỗ trợ (Computer-Aided Diagnosis) giúp sàng lọc
+                      nhanh và giảm tải công việc. Bác sĩ chuyên khoa vẫn là người đưa ra kết luận lâm sàng và phác đồ
+                      điều trị cuối cùng.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <div class="faq-item">
+                  <h3>Định dạng ảnh nào được hệ thống hỗ trợ?</h3>
+                  <div class="faq-content">
+                    <p>Hệ thống hiện tại hỗ trợ các định dạng ảnh phổ biến như JPG, JPEG và PNG. Để có kết quả tốt nhất,
+                      vui lòng tải lên hình ảnh X-quang ngực rõ nét, không bị lóa hoặc che khuất.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <div class="faq-item">
+                  <h3>Công nghệ nào được sử dụng để xây dựng website này?</h3>
+                  <div class="faq-content">
+                    <p>Dự án được phát triển với phần Backend sử dụng Python (Flask), mô hình Deep Learning được xây
+                      dựng bằng TensorFlow/Keras (mạng CNN), và giao diện Frontend tối ưu hóa bằng Bootstrap.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <section id="testimonials" class="testimonials section">
+
+        <div class="container">
+
+          <div class="row align-items-center">
+
+            <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+              <h3>Đánh Giá Hệ Thống</h3>
+              <p>
+                Những phản hồi và nhận xét tích cực về hiệu năng, tốc độ xử lý cũng như khả năng ứng dụng thực tiễn của
+                mô hình AI X-Ray trong việc chẩn đoán viêm phổi.
+              </p>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <div class="d-flex">
+                        <img src="/static/assets/img/testimonials/testimonials-1.jpg"
+                          class="testimonial-img flex-shrink-0" alt="">
+                        <div>
+                          <h3>Chuyên gia Y tế</h3>
+                          <h4>Cố vấn dự án</h4>
+                          <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>Giao diện trực quan và tốc độ phản hồi cực kỳ nhanh. Mô hình CNN đã được train khá tốt,
+                          nhận diện chuẩn xác các vùng phổi mờ do dịch viêm. Rất có tiềm năng ứng dụng thực tế.</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonial-item">
+                      <div class="d-flex">
+                        <img src="/static/assets/img/testimonials/testimonials-2.jpg"
+                          class="testimonial-img flex-shrink-0" alt="">
+                        <div>
+                          <h3>Người dùng thử nghiệm</h3>
+                          <h4>Tester</h4>
+                          <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        <span>Chỉ cần tải ảnh lên là có ngay kết quả kèm theo độ tin cậy phần trăm rõ ràng. Trang web
+                          không bị lag khi load model nặng, rất ấn tượng với khả năng tối ưu backend!</span>
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+      <section id="gallery" class="gallery section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Dữ Liệu Ảnh Mẫu</h2>
+          <p>Một số hình ảnh X-quang từ tập dữ liệu huấn luyện (Training Dataset) minh họa cho phổi bình thường và phổi
+            viêm</p>
+        </div>
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row g-0">
+
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="/static/assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
+                  <img src="/static/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="/static/assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
+                  <img src="/static/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="/static/assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
+                  <img src="/static/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+              <div class="gallery-item">
+                <a href="/static/assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
+                  <img src="/static/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <section id="contact" class="contact section">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Liên Hệ</h2>
+          <p>Nếu bạn có bất kỳ câu hỏi nào về mô hình AI hoặc dự án này, đừng ngần ngại gửi tin nhắn cho chúng tôi</p>
+        </div>
+        <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 270px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0603601552044!2d106.62629631526058!3d10.806689092300645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaMawxqFuZyBUUC4gSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1680000000000!5m2!1svi!2s"
+            frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Địa Chỉ</h3>
+                  <p>Trường Đại học Công Thương TP.HCM (HUIT)</p>
+                  <p>Lê Trọng Tấn, Quận Tân Phú, TP.HCM</p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Điện Thoại</h3>
+                  <p>+84 123 456 789</p>
+                </div>
+              </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>ai.project@huit.edu.vn</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Tên của bạn" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Email của bạn" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Chủ đề" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Nội dung lời nhắn"
+                      required=""></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Đang gửi</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Tin nhắn của bạn đã được gửi. Xin cảm ơn!</div>
+
+                    <button type="submit">Gửi Tin Nhắn</button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">AI X-Ray</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Phát triển bởi nhóm sinh viên tài năng đẹp chai đang thuyết trình</p>
+            <p>Trường Đại học Công Thương TP.HCM</p>
+            <p class="mt-3"><strong>Mã trưởng khoa:</strong> <span>2001230640</span></p>
+            <p><strong>Dự án:</strong> <span>Deep Learning Medical AI</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-github"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Liên Kết Hữu Ích</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#about">Về dự án</a></li>
+            <li><a href="#services">Tính năng</a></li>
+            <li><a href="#appointment">Chẩn đoán ngay</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Công Nghệ Sử Dụng</h4>
+          <ul>
+            <li><a href="#">Python & Flask Backend</a></li>
+            <li><a href="#">TensorFlow & Keras</a></li>
+            <li><a href="#">OpenCV Image Processing</a></li>
+            <li><a href="#">Bootstrap UI</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">AI X-Ray Project</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">NhutDolphin</a> Distributed by <a
+          href="https://themewagon.com">NhutDolphin</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="/static/assets/js/main.js"></script>
+  <style>
+    /* CSS cho nút và khung chat */
+    #chat-widget {
+      position: fixed;
+      bottom: 80px;
+      /* Nằm trên nút mũi tên lên top */
+      right: 15px;
+      z-index: 9999;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #chat-toggle-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #1977cc;
+      color: white;
+      border: none;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #chat-toggle-btn:hover {
+      background-color: #166ab5;
+    }
+
+    #chat-window {
+      display: none;
+      width: 350px;
+      height: 500px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      overflow: hidden;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+    }
+
+    #chat-header {
+      background: #1977cc;
+      color: white;
+      padding: 15px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #chat-header button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #chat-body {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #f4f7f6;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message {
+      max-width: 80%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    .msg-bot {
+      background: #e9ecef;
+      color: #333;
+      align-self: flex-start;
+      border-bottom-left-radius: 2px;
+    }
+
+    .msg-user {
+      background: #1977cc;
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 2px;
+    }
+
+    .msg-bot img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+
+    #chat-input-area {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      background: white;
+    }
+
+    #chat-input-area input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    #chat-input-area button {
+      background: #1977cc;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      margin-left: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+
+  <div id="chat-widget">
+    <button id="chat-toggle-btn" onclick="toggleChat()"><i class="bi bi-chat-dots-fill"></i></button>
+
+    <div id="chat-window">
+      <div id="chat-header">
+        <span>👨‍⚕️ Bác sĩ AI (Trực Tuyến)</span>
+        <button onclick="toggleChat()">&times;</button>
+      </div>
+      <div id="chat-body" id="chat-body">
+        <div class="message msg-bot">Chào bạn, tôi là trợ lý AI. Tôi có thể giúp gì cho bạn?</div>
+      </div>
+      <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleEnter(event)">
+        <button onclick="sendUserMessage()"><i class="bi bi-send-fill"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const GEMINI_API_KEY = "AIzaSyAhcmlYmuLoupcOeQQnzFjocZ4bxHBAnxs"; // Key của Thy
+    let chatHistory = []; // Lưu lịch sử chat để AI nhớ ngữ cảnh
+
+    function toggleChat() {
+      const chatWin = document.getElementById('chat-window');
+      chatWin.style.display = chatWin.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function appendMessage(sender, text, isHTML = false) {
+      const chatBody = document.getElementById('chat-body');
+      const div = document.createElement('div');
+      div.className = `message ${sender === 'user' ? 'msg-user' : 'msg-bot'}`;
+      if (isHTML) div.innerHTML = text;
+      else div.innerText = text;
+      chatBody.appendChild(div);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    // Hàm delay để tạo cảm giác "đang gõ phím"
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    // HÀM TROLL CHÍNH SẼ ĐƯỢC GỌI KHI CÓ KẾT QUẢ X-RAY
+    async function triggerTrollSequence(xrayResult) {
+      const chatWin = document.getElementById('chat-window');
+      if (chatWin.style.display !== 'flex') toggleChat();
+
+      // 1. Gửi ảnh dọa dẫm
+      await sleep(1000);
+      appendMessage('bot', 'Tôi đã nhận được kết quả X-quang của bạn... <br><img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="troll">', true);
+
+      // 2. Spam văn mẫu Vũ
+      await sleep(2000);
+      appendMessage('bot', 'Alo em có phải Vũ không?');
+
+      await sleep(2000);
+      appendMessage('bot', 'Ui Vũ ơi em đừng có chối, thông tin về tên địa chỉ nhà, học trường gì, ở đâu, bố mẹ tên là gì anh có cả ở đây rồi.');
+
+      await sleep(3000);
+      appendMessage('bot', `Vũ có cần anh đọc cho nghe một số thông tin không? Vũ ơi em còn trẻ quá, hơn con anh có mấy tuổi à, sao Vũ lại làm thế, còn cả tương lai đằng trước, Vũ thích anh cho người đến tận nhà nói chuyện với bố mẹ em về kết quả X-ray: <b>${xrayResult}</b> này không?`, true);
+
+      // 3. Gọi Gemini API để lấy lời khuyên thật
+      await sleep(2000);
+      appendMessage('bot', '<i>...Hệ thống đang tổng hợp lời khuyên y tế...</i>', true);
+
+      const prompt = `Bạn là bác sĩ chuyên khoa phổi. Bệnh nhân vừa nhận kết quả chẩn đoán X-quang là: "${xrayResult}". Hãy đưa ra một lời khuyên sức khỏe ngắn gọn, chân thành và hữu ích. Dùng danh xưng "Bác sĩ" và "Bạn".`;
+
+      chatHistory.push({ "role": "user", "parts": [{ "text": prompt }] });
+      const systemPrompt = "Bạn là một trợ lý y tế AI cực kỳ dễ thương, nhí nhảnh và thân thiện. Bạn MẶC ĐỊNH LUÔN LUÔN trả lời bằng Tiếng Việt. Kể cả khi người dùng nói xàm, nói nhảm, hay trêu đùa, hãy đáp lại một cách đáng yêu, hài hước bằng tiếng Việt, tuyệt đối không dùng tiếng Anh.";
+
+      try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: chatHistory })
+        });
+        const data = await response.json();
+        const botReply = data.candidates[0].content.parts[0].text;
+
+        chatHistory.push({ "role": "model", "parts": [{ "text": botReply }] });
+        appendMessage('bot', '🩺 Lời khuyên nghiêm túc: ' + botReply);
+      } catch (err) {
+        appendMessage('bot', 'Lỗi kết nối đến não bộ của AI rồi :(');
+      }
+    }
+
+    // Chức năng chat bình thường với người dùng
+    async function sendUserMessage() {
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMessage('user', text);
+      input.value = '';
+
+      chatHistory.push({ "role": "user", "parts": [{ "text": text }] });
+      const systemPrompt = "Bạn là một trợ lý y tế AI cực kỳ dễ thương, nhí nhảnh và thân thiện. Bạn MẶC ĐỊNH LUÔN LUÔN trả lời bằng Tiếng Việt. Kể cả khi người dùng nói xàm, nói nhảm, hay trêu đùa, hãy đáp lại một cách đáng yêu, hài hước bằng tiếng Việt, tuyệt đối không dùng tiếng Anh.";
+
+      try {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: chatHistory })
+        });
+        const data = await response.json();
+        const botReply = data.candidates[0].content.parts[0].text;
+
+        chatHistory.push({ "role": "model", "parts": [{ "text": botReply }] });
+        appendMessage('bot', botReply);
+      } catch (err) {
+        appendMessage('bot', 'Xin lỗi, mạng mẽo đang có vấn đề!');
+      }
+    }
+
+    function handleEnter(e) {
+      if (e.key === 'Enter') sendUserMessage();
+    }
+  </script>
+
+</body>
+
+</html>
